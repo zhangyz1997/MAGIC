@@ -329,7 +329,7 @@ magic.Seurat <- function(
       assay <- Seurat::DefaultAssay(object = data)
     }
     results <- magic(
-      data = t(x = Seurat::GetAssayData(object = data, slot = "data", assay = assay)),
+      data = t(x = Seurat::GetAssayData(object = data, layer = "data", assay = assay)),
       genes = genes,
       knn = knn,
       knn.max = knn.max,
